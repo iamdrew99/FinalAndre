@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Declaracion de variables */
+:root {
+  /* Variables para la paleta de colores */
+  --color-blanco: #fff;
+  --color-negro: #000;
+  --color-celesteclaro: #32b8da;
+  --color-celeste: #07a7e3;
+  --color-turquesa: #32dac3;
+  --color-grisclaro: #dbdbdb;
+  --color-gris: #c0c0c0;
+  --color-grisoscuro: #3d3d47;
+  --color-grispiepag: #444f5d;
+
+  /* Variables para las fuentes de la pagina */
+  --fuente-principal: "Open sans", sans-serif;
+  --fuente-secundaria: "Roboto";
+}
+
+* {
+  /* Elimina el margen y espaciado predeterminado de los elementos */
+  margin: 0%;
+  padding: 0%;
+}
+
+/*-----------------------------------
+ Selectores de estilos de tipo HTML 
+ -----------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+}
+
+h1 {
+  font-size: 40px; /*Tamaño de letra*/
+  font-weight: 300; /*Grosor de letra*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+}
+
+h2 {
+  font-size: 28px; /*Tamaño de letra*/
+  line-height: 36px; /*Interlineado*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+  font-weight: 300; /*Grosor de letra*/
+  text-align: center;
+}
+
+h3 {
+  font-size: 25px; /*Tamaño de letra*/
+  font-weight: 300; /*Grosor de letra*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+}
+
+h4 {
+  font-size: 23px; /*Tamaño de letra*/
+  font-weight: 300; /*Grosor de letra*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+}
+
+h5 {
+  font-size: 20px; /*Tamaño de letra*/
+  font-weight: 300; /*Grosor de letra*/
+  font-family: var(--fuente-secundaria); /*Tipo de letra*/
+}
+
+p {
+  line-height: 1.5; /*Interlineado*/
+  padding-bottom: 10px; /*Espacio entre el borde de la caja y la zona inferior*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+}
+
+img {
+  display: block;
+}
+
+/*-----------------------------------
+ Selectores de estilos de tipo ID 
+ -----------------------------------*/
+
+#cabecera {
+  background-color: var(--color-blanco); /* Color de fondo */
+  color: var(--color-grisoscuro); /* Color del texto */
+  /*posicionamiento pegajoso*/
+  position: sticky;
+  /*coordenadas de ubicacion*/
+  top: 0px;
+  z-index: 1000; /*cbecera encima de todo */
+}
+
+#cabezal {
+  background-image: url("../imagenes/imagencabezal.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*Efecto de mover la pagina sin mover la foto*/
+}
+
+#nosotros {
+  padding-top: 90px;
+  padding-bottom: 80px;
+  border: 1px solid var(--color-grisclaro);
+  background-color: var(--color-blanco);
+  color: var(--color-grisoscuro);
+}
+
+#tratamientos {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  background-image: url(../imagenes/fondo.jpg);
+  background-repeat: repeat; /*Se repite la foto*/
+  text-align: center;
+}
+
+#estadisticas {
+  background: linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -webkit-linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -moz-linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  color: var(--color-blanco);
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+#estadisticas .columna:hover {
+  filter: brightness(180%);
+  scale: 110%;
+}
+
+#doctores {
+  /* Espacio entre el borde y el contenido */
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  text-align: center;
+
+  background-image: url(../imagenes/fondo.jpg);
+  background-repeat: repeat; /*Se repite la foto*/
+  color: var(--color-grisoscuro);
+}
+
+#planes {
+  background: linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -webkit-linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -moz-linear-gradient(0deg, #07a7e3 0%, #32dac3 80%);
+  color: var(--color-blanco);
+}
+
+#testimonios-porqueelegirnos {
+  border: 1px solid var(--color-grisclaro);
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: var(--color-blanco);
+  color: var(--color-grisoscuro);
+}
+
+#recom-tratamientos {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#recom-tratamientos .borde:hover {
+  color: var(--color-blanco);
+  background: linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -webkit-linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -moz-linear-gradient(0deg, #07a7e3 0%, #32dac3 80%);
+  border: none;
+}
+
+#vinculos {
+  background: linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -webkit-linear-gradient(
+    0deg,
+    #07a7e3 0%,
+    #32dac3 80%
+  ); /* Color de fondo */
+  background: -moz-linear-gradient(0deg, #07a7e3 0%, #32dac3 80%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contactenos {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: var(--color-grispiepag);
+  color: var(--color-blanco);
+}
+
+#barra-ubicacion {
+  background-color: var(--color-celeste);
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#nosotros img:hover {
+  filter: saturate(160%);
+}
+
+#nosotros img {
+  transition: all 0.3s ease-out;
+}
+
+#doctores img:hover {
+  filter: saturate(160%);
+  transform: scale(110%);
+}
+
+#doctores img {
+  transition: all 0.3s ease-out;
+}
+
+#tratamientos img:hover {
+  filter: saturate(160%);
+  transform: scale(110%);
+}
+
+#tratamientos img {
+  transition: all 0.3s ease-out;
+}
+
+.caja-overflow {
+  overflow: hidden;
+}
+
+#contactenos img:hover {
+  transition: all 0.3s ease-out;
+
+  filter: contrast(150%);
+  transform: scale(160%);
+}
+
+#scroll-arriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  /* Decoración de botón */
+  width: 67px;
+  height: 67px;
+  line-height: 67px; /* Centrar verticalmente el icono */
+  text-align: center; /* Centrar horizontalmente */
+  background-color: #68686dbf;
+  border: rgb(214, 210, 210) 0.2px solid;
+  color: #fff;
+  border-radius: 10%;
+
+  /* Transición */
+  transition: all 0.3s ease-in-out;
+}
+
+#scroll-arriba:hover {
+  background-color: #ffffff;
+  color: #433f3f;
+  transform: translateY(-5px);
+  box-shadow: -3px 8px 25px 0px rgba(138, 140, 142, 0.114);
+}
+
+#especialidades-programas {
+  background-color: #ebebeb;
+  color: #3d3d47;
+}
+
+/*-----------------------------------
+ Selectores de estilos de tipo CLASS 
+ -----------------------------------*/
+
+.menu-barra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* alineacion vertical autom*/
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.menu-opciones {
+  list-style-type: none; /* quita las viñetas*/
+}
+.menu-opciones a {
+  color: #0b0bed; /* Color del texto */
+  text-decoration: none;
+}
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+.menu-items li {
+  padding: 10px 15px; /* forma abreviada de padding, el primer para vertical, segundo para horizontal*/
+  transition: all 0.3s ease-in-out;
+}
+.menu-items li:hover {
+  background-color: #83dafa;
+  border-radius: 20px;
+}
+.espaciado {
+  /* Espacio entre el borde de la caja y su contenido */
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.textogrande {
+  font-weight: 600;
+  color: var(--color-blanco);
+  text-shadow: 1px 1px 23px rgba(50, 218, 195, 1);
+}
+
+.fila_head {
+  display: flex; /* Activa Flexbox */
+  flex-direction: row; /* Los elementos hijo se colocaran uno al lado de otro */
+}
+.contenedor {
+  max-width: 65%; /* tamaño max. sobre respecto a la caja padre */
+
+  /*centrar el contenedor */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fila {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex; /* Activa Flexbox */
+  flex-direction: row; /* Los elementos hijo se colocaran uno al lado de otro */
+}
+
+.columna {
+  flex-basis: 0px; /* Reduce el minimo el ancho del contenedor */
+  flex-grow: 1; /* Agranda el contenedor proporcionalmente */
+
+  /* espaciado entre el borde de las imagenes */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cabecera {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.texto_resaltado {
+  color: var(--color-celeste);
+}
+
+.texto_negrita {
+  font-weight: 600;
+}
+
+.borde_planes {
+  border: 1px solid #c0c0c0; /*Color y tamaño de borde*/
+  background-color: var(--color-blanco);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.borde_chico {
+  border: 1px solid #32b8da; /*Color y tamaño de borde*/
+  background-color: #32b8da;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px 15px 15px 15px; /*Radio del borde*/
+}
+
+.borde_chico:hover {
+  background-color: var(--color-turquesa);
+  border-radius: 20px;
+}
+
+.elementosconsecutivos {
+  padding-top: 30px;
+  display: flex; /* Activa Flexbox */
+  flex-direction: row; /* Los elementos hijo se colocaran uno al lado de otro */
+}
+
+.imgcliente {
+  width: 15%; /* Ajusta el ancho de la imagen al ancho de su contenedor padre */
+  height: auto; /* Cambia proporcionalmente la altura de la imagen */
+  border-radius: 50%; /* borde redondeado en la imagen */
+}
+
+.imgrecomendacion {
+  width: 40%; /* Ajusta el ancho de la imagen al ancho de su contenedor padre */
+  height: 40%;
+  border-radius: 50%; /* borde redondeado en la imagen */
+}
+
+.borde {
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  background-color: var(--color-blanco);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.img_ajustarancho {
+  padding-bottom: 20px;
+  width: 100%; /* ajusta el ancho de la imagen al ancho de su contenedor padre*/
+  height: auto; /* cambia proporcionalmente la altura de la imagen*/
+}
+
+.texto_azul {
+  color: #19afdd;
+}
+
+.texto_enorme {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--color-celeste);
+  text-align: center;
+}
+
+.video-portada {
+  position: relative;
+}
+.descripcion {
+  position: absolute;
+  left: 65%;
+  top: 75%;
+  color: #fff;
+}
+.video-responsive {
+  /* ajustar el tamaño del video al tamaño de la caja padre */
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nosotros-foto {
+  position: relative;
+}
+
+.nosotros-foto-descripcion {
+  position: absolute;
+  bottom: 20px;
+  background: linear-gradient(0deg, #00a0ff 0%, #47ffd5 100%);
+  filter: opacity(75%);
+
+  color: var(--color-blanco);
+
+  width: 100%;
+  height: 94%;
+
+  /* Centrar verticalmente */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Centrar horizontalmente */
+  text-align: center;
+
+  /* Ocultar la caja */
+  opacity: 0;
+
+  /* Aplicar transición */
+  transition: all 0.5s ease-in-out;
+}
+
+.nosotros-foto-descripcion img {
+  display: block;
+}
+
+.nosotros-foto-descripcion:hover {
+  opacity: 1;
+}
+
+#portada h1 span {
+  color: rgba(0, 0, 0, 0.458);
+}
+
+/*-----------------------
+selectores anidados
+-------------------------*/
+
+#cabecera .fila {
+  justify-content: space-between; /*Espacio entre elementos*/
+}
+
+#cabecera p {
+  text-align: end;
+}
+
+#cabezal h3 {
+  color: var(--color-blanco);
+  font-size: 50px;
+}
+
+#nosotros h2 {
+  font-weight: 400;
+}
+
+#tratamientos h2 {
+  color: var(--color-grispiepag);
+}
+
+#tratamientos p {
+  color: var(--color-grisoscuro);
+}
+
+#tratamientos .columna {
+  border: 7px solid #ffffff;
+  box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+}
+
+#estadisticas .columna {
+  background: rgba(255, 255, 255, 0.2);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: 10px;
+}
+
+#estadisticas h2 {
+  padding-bottom: 20px;
+}
+
+#doctores .columna {
+  border: 1px solid #c0c0c0;
+  background-color: var(--color-blanco);
+  text-align: center;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+#doctores .img_ajustarancho {
+  border-radius: 50%;
+}
+
+#doctores .columna {
+  border: 7px solid #ffffff;
+  background: var(--color-blanco);
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 45px;
+
+  box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 6px 13px 8px -11px rgba(0, 0, 0, 0.11);
+}
+
+#planes h1 {
+  text-align: center;
+  color: var(--color-grispiepag);
+  font-weight: 400;
+}
+#planes h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 50px;
+  font-weight: 600;
+}
+#planes h3 {
+  color: var(--color-blanco);
+  text-align: center;
+}
+
+#planes p {
+  line-height: 1.5; /*Interlineado*/
+  padding-bottom: 10px; /*Espacio entre el borde de la caja y la zona inferior*/
+  font-family: var(--fuente-principal); /*Tipo de letra*/
+  text-align: center;
+  color: var(--color-gris);
+}
+
+#planes .contenedor {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  line-height: 2;
+}
+
+#planes .columna {
+  background-color: var(--color-blanco);
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+#testimonio > .borde {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#tratamientos .columna {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#tratamientos h2 {
+  font-weight: 400; /*Grosor de letra*/
+}
+
+#vinculos a {
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+#vinculos .fila {
+  justify-content: space-between;
+}
+
+#contactenos p {
+  color: var(--color-gris);
+}
+
+#testimonios-porqueelegirnos img:hover {
+  filter: grayscale(150%);
+}
+
+#contactanos {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#contactanos h2 {
+  color: var(--color-grisoscuro);
+  font-weight: 500;
+}
+
+#contactanos i {
+  color: var(--color-turquesa);
+  margin-right: 10px;
+}
+
+.form-campo {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  border: 1px solid var(--color-gris);
+  background: #ffffff;
+  border-radius: 50px;
+  font-family: var(--fuente-principal);
+  width: 200px;
+}
+.comentanos {
+  margin-bottom: 15px;
+}
+
+.comentanos .form-campo {
+  padding-bottom: 250px;
+  border-radius: 30px;
+  width: 450px;
+}
+
+.formulario-contacto .boton-enviar {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: var(--color-celeste);
+  color: var(--color-blanco);
+  font: var(--fuente-principal);
+  width: 15%;
+  height: 15%;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.video-responsive {
+  /* Ajusta el tamaño del video al tamaño de la caja padre */
+  aspect-ratio: 16 / 9; /* 16 / 9,  4 / 3,  21 / 9 */
+  width: 100%;
+  height: auto;
+}
+
+.mapa {
+  margin-bottom: 10px;
+}
+
+.mapa-leyenda {
+  color: var(--color-grispiepag);
+}
+/* Agrega regla CSS para imágenes dentro del encabezado */
+.fila_head img {
+  max-width: 100%; /* La imagen no superará el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Agrega regla CSS para el encabezado */
+.fila_head {
+  display: flex;
+  align-items: center;
+}
+
+/* Ajusta el tamaño del logo */
+.fila_head img {
+  width: 80px; /* Ajusta el tamaño del logo según tus necesidades */
+  margin-right: 10px; /* Añade un pequeño margen a la derecha del logo */
+}
+
+/* Establece un tamaño de fuente más grande para el encabezado */
+h1 {
+  font-size: 1.5em;
+}
+
+/* Hace que la barra de navegación sea responsive */
+.menu-barra {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ajusta el tamaño de la fuente de la barra de navegación */
+.menu-opciones a {
+  font-size: 1em;
+}
+
+/* Ajusta el espacio entre las opciones del menú */
+.menu-items li {
+  margin-right: 10px;
+}
+
+/* Alinea el texto del pie de página */
+#contactenos h3 {
+  text-align: center;
+}
+
+/* Ajusta el tamaño de fuente de las redes sociales en el pie de página */
+#contactenos .columna p {
+  font-size: 0.9em;
+}
+
+/* Hace que la ubicación sea responsive */
+#barra-ubicacion h1 {
+  font-size: 1.5em;
+}
+
+/* Hace que la imagen de ubicación sea responsive */
+#barra-ubicacion img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajusta el tamaño de fuente del pie de página */
+#contactenos p {
+  font-size: 0.9em;
+}
+
+/* Alinea el texto del pie de página */
+#contactenos p {
+  text-align: center;
+}
+
+/* Hace que el botón de scroll sea visible solo en pantallas más grandes */
+#scroll-arriba {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Muestra el botón de scroll solo en pantallas más grandes */
+  #scroll-arriba {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5em;
+  }
+}
